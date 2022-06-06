@@ -1,6 +1,6 @@
 {
     "name": "reddatasrd/tosend",
-    "description": "paque de envios de mesajeria electronica",
+    "description": "paquete de envios de mesajeria electronica",
     "type": "library",
     "require": {
         "phpunit/phpunit": "^9.5"
@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Reddatasrd\\Send\\SenderviceProvider"
+                "Reddatasrd\\Send\\SendServiceProvider"
             ]
         }
     }
