@@ -1,6 +1,6 @@
 {
     "name": "reddatasrd/tosend",
-    "description": "paquete de envios de mesajeria electronica",
+    "description": "paquete de envios de mesajeria electronico",
     "type": "library",
     "require": {
         "phpunit/phpunit": "^9.5"
