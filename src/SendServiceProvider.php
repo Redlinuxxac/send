@@ -2,7 +2,7 @@
 
 namespace Reddatasrd\Send;
 
-use Redlinux\Send\Send;
+use Reddatasrd\Send\Send;
 use Illuminate\Support\ServiceProvider;
 use Reddatasrd\Send\SendFacade;
 
