@@ -16,12 +16,13 @@ class Send
         mail($para, $titulo, $mensaje);
     }
     /**
-     * @param $para
-     * @param $titulo
+     * @param $to
+     * @param $Subject
      * @param $mensaje
-     * @param $cabeceras
+     * @param $vista
+     * @param $FromMail
      */
-    static function toHtml($toAddress, $subject='Prueba', $mensaje='Prueba', $fromMail="inf@elizabethgconstruction.com")
+    static function toHtml($toAddress, $subject='Prueba',$mensaje='Prueba',$vista='',  $fromMail="inf@elizabethgconstruction.com")
     {
         // Para enviar un correo HTML, debe establecerse la cabecera Content-type
         $para        = explode(",", $toAddress);
@@ -46,7 +47,12 @@ class Send
         $cabeceras[] = 'Content-type: text/html; charset=utf-8';   
         $cabeceras[] = 'To: '.$para;
         $cabeceras[] = 'From: '.$fromMail; 
-        $mensaje = view("$mensaje", compact('subject', 'mensaje'));
+        if($vista!=''){
+                $mensaje = view($vista, compact('subject', 'mensaje'));
+            }
+        else{
+            $mensaje=$mensaje;
+        }
 
         mail($para, $subject, $mensaje, implode("\r\n", $cabeceras));
     }
