@@ -17,6 +17,11 @@
             "Reddatasrd\\Send\\": "src/"
         }
     },
+    "scripts": {
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=views --ansi --force"
+        ]
+    },
     "extra": {
         "laravel": {
             "providers": [
