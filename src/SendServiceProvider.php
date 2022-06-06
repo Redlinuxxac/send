@@ -41,7 +41,9 @@ class SendServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/resources/views' => base_path('resources/views/'),
+        ],'views');
     }
     /**
      * Rusatas
