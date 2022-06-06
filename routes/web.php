@@ -6,7 +6,7 @@ use Reddatasrd\Send\SendFacade;
 
 Route::get('/send', function(){
     $para='Rosarioedwinac@gmail.com';
-    $titulo='Prueba';
-    $mensaje='index.index';//belich::
+    $titulo='Prueba Final';
+    $mensaje='Send::index.index';//Send::
     return Send::toHtml($para, $titulo, $mensaje);
 });

@@ -21,13 +21,16 @@ class Send
      * @param $mensaje
      * @param $cabeceras
      */
-    static function toHtml($para, $titulo='Prueba', $mensaje='Prueba')
+    static function toHtml($toAddress, $subject='Prueba', $mensaje='Prueba', $fromMail="inf@elizabethgconstruction.com")
     {
         // Para enviar un correo HTML, debe establecerse la cabecera Content-type
-        $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-        $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $mensaje = view("$mensaje");
-        
-        mail($para, $titulo, $mensaje, $cabeceras);
+        $para        = implode(",", $toAddress);
+        $cabeceras[] = 'MIME-Version: 1.0';
+        $cabeceras[] = 'Content-type: text/html; charset=utf-8';   
+        $cabeceras[] = 'To: '.$para;
+        $cabeceras[] = 'From: '.$fromMail; 
+        $mensaje = view("$mensaje", compact('titulo', 'mensaje'));
+
+        mail($para, $subject, $mensaje, implode("\r\n", $cabeceras));
     }
 }
