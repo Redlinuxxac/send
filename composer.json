@@ -2,7 +2,7 @@
     "name": "reddatasrd/tosend",
     "description": "paquete de envios de mesajeria electronico",
     "type": "library",
-    "require": {
+    "require-dev": {
         "phpunit/phpunit": "^9.5"
     },
     "license": "MIT",
