@@ -1,5 +1,5 @@
 {
-    "name": "reddatas/tosend",
+    "name": "reddatasrd/tosend",
     "description": "paque de envios de mesajeria electronica",
     "type": "library",
     "require": {
@@ -11,5 +11,17 @@
             "name": "Edwin Rafael Rosario De La Rosa",
             "email": "rosarioedwinac@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Reddatasrd\\Send\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Reddatasrd\\Send\\SenderviceProvider"
+            ]
+        }
+    }
 }
