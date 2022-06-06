@@ -22,7 +22,7 @@ class Send
      * @param $vista
      * @param $FromMail
      */
-    static function toHtml($toAddress, $subject='Prueba',$mensaje='Prueba',$vista='',  $fromMail="inf@elizabethgconstruction.com")
+    static function toHtml($toAddress, $subject='Prueba',$mensaje='Prueba',$vista='',$attach,  $fromMail="inf@elizabethgconstruction.com")
     {
         // Para enviar un correo HTML, debe establecerse la cabecera Content-type
         $para        = explode(",", $toAddress);
@@ -48,7 +48,7 @@ class Send
         $cabeceras[] = 'To: '.$para;
         $cabeceras[] = 'From: '.$fromMail; 
         if($vista!=''){
-                $mensaje = view($vista, compact('subject', 'mensaje'));
+                $mensaje = view($vista, compact('subject', 'mensaje','attach'));
             }
         else{
             $mensaje=$mensaje;

@@ -9,5 +9,6 @@ Route::get('/send', function(){
     $titulo='Prueba Final';
     $vista='Send::index.index';//Send::
     $mensaje='Envio de Prueba de nueva libreria crada por Edwin Rosario';//Send::
-    return Send::toHtml($para, $titulo, $mensaje,$vista);
+    $attach= asset('favicon.ico');
+    return Send::toHtml($para, $titulo, $mensaje,$vista,$attach);
 });
