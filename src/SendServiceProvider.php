@@ -42,7 +42,10 @@ class SendServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/'),
+            __DIR__.'/../resources/views' => base_path('resources/views/reddatasrd'),
+        ],'laravel-assets');
+        $this->publishes([
+            __DIR__.'/../routes' => base_path('routes/reddatasrd'),
         ],'laravel-assets');
     }
     /**
