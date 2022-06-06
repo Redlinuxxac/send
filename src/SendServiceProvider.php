@@ -43,7 +43,7 @@ class SendServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../resources/views' => base_path('resources/views/'),
-        ],'views');
+        ],'laravel-assets');
     }
     /**
      * Rusatas
