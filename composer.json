@@ -21,7 +21,10 @@
         "laravel": {
             "providers": [
                 "Reddatasrd\\Send\\SendServiceProvider"
-            ]
+            ],
+        "aliases": {
+            "Send": "Reddatasrd\\Send\\SendFacade"
         }
+    }
     }
 }
