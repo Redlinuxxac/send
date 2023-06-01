@@ -18,7 +18,7 @@ class SendServiceProvider extends ServiceProvider
         //rutas
         $this->registerRoutes();
         //controlador
-        //$this->app->make('Reddatasrd\Send\Controllers\MainController');
+        $this->app->make('Reddatasrd\Send\Controllers\MainController');
 
          //Resources 
          $this->registerResources();
