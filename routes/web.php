@@ -5,7 +5,7 @@ use Reddatasrd\Send\SendFacade;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/send', function(){
+Route::get('/tmp-send', function(){
     $para='Rosarioedwinac@gmail.com,kmr105@hotmail.com';
     $titulo='Prueba Final';
     $vista='Send::index.index';//Send::
